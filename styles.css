@@ -1,0 +1,230 @@
+:root {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-page-bg: #030712;
+  --color-surface: #0f172a;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-border: #1e293b;
+  
+  --font-family-base: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-small: 0.875rem;
+  
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --border-radius: 12px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-main);
+  background-color: var(--color-page-bg);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1; /* Змушує підвал притискатися до низу екрана */
+}
+
+/* --- Нові елементи: Header та Footer --- */
+.site-header {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-page-bg);
+}
+
+.header-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  color: var(--color-text-main);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+.site-footer {
+  padding: 24px 0;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  margin-top: 40px;
+}
+
+/* --- Основний контент (з ЛР №2) --- */
+.pricing {
+  padding: 60px 20px;
+}
+
+.pricing-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  background-color: var(--color-surface); 
+  padding: 60px 40px;
+  border-radius: 20px;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* Логічна ієрархія: H1 малий і технічний, H2 - візуально великий */
+.pricing-header h1 {
+  font-size: var(--font-size-small);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.pricing-header h2 {
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--spacing-sm);
+}
+
+.pricing-header p {
+  color: var(--color-text-muted);
+}
+
+.pricing-grid {
+  display: flex;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  background-color: transparent; 
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-name {
+  text-transform: uppercase;
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+}
+
+.card-price {
+  margin-bottom: var(--spacing-xl);
+}
+
+.card-price .amount {
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+  color: var(--color-text-main);
+}
+
+.card-price .period {
+  color: var(--color-text-muted);
+}
+
+.card-features {
+  list-style: none;
+  margin-bottom: var(--spacing-xl);
+  flex-grow: 1;
+}
+
+.card-features li {
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-muted);
+}
+
+.card-features li::before {
+  content: "✓";
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+/* Оновлені кнопки (тепер це теги <a>) */
+.btn {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-text-main);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--color-text-muted);
+}
+
+.card--featured {
+  border: 2px solid var(--color-primary);
+  background-color: rgba(37, 99, 235, 0.03); 
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+@media (max-width: 768px) {
+  .pricing-grid { flex-direction: column; align-items: center; }
+  .card { width: 100%; max-width: 400px; }
+  .card--featured { transform: scale(1); }
+  .pricing-container { padding: 40px 20px; }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Оптимізовані метадані для SEO -->
+  <title>Тарифні плани GymPlanner | Керування фітнес-клубом</title>
+  <meta name="description" content="Порівняйте тарифи Basic, Pro та Enterprise для вашого тренажерного залу. Оберіть найкращий план для управління розкладом та клієнтами.">
+  <link rel="canonical" href="https://andriihnatenko-ux.github.io/web-dev-lab_3/">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Семантичний header та навігація -->
+  <header class="site-header">
+    <div class="container header-container">
+      <nav>
+        <a href="/" class="logo">GymPlanner</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Основний контент сторінки -->
+  <main>
+    <section class="pricing">
+      <div class="container pricing-container">
+        
+        <header class="pricing-header">
+          <!-- Логічна ієрархія заголовків -->
+          <h1>Підписка на платформу</h1> 
+          <h2>Наші тарифи</h2>
+          <p>Оберіть план, який найкраще підходить для масштабу вашого бізнесу</p>
+        </header>
+
+        <div class="pricing-grid">
+          <!-- Картка Basic -->
+          <article class="card">
+            <h3 class="card-name">Basic</h3>
+            <div class="card-price">
+              <span class="amount">$10</span><span class="period">/ month</span>
+            </div>
+            <ul class="card-features">
+              <li>1 Адміністратор</li>
+              <li>База до 100 клієнтів</li>
+              <li>Базова підтримка</li>
+            </ul>
+            <!-- Кнопку змінено на семантичне посилання -->
+            <a href="/checkout/basic" class="btn">Обрати Basic</a>
+          </article>
+
+          <!-- Картка Pro -->
+          <article class="card card--featured">
+            <div class="badge">PRO • ACTIVE</div>
+            <h3 class="card-name">Pro</h3>
+            <div class="card-price">
+              <span class="amount">$29</span><span class="period">/ month</span>
+            </div>
+            <ul class="card-features">
+              <li>5 Адміністраторів</li>
+              <li>Безлімітна база клієнтів</li>
+              <li>Пріоритетна підтримка</li>
+            </ul>
+            <a href="/checkout/pro" class="btn btn--primary">Почати безкоштовно</a>
+          </article>
+
+          <!-- Картка Enterprise -->
+          <article class="card">
+            <h3 class="card-name">Enterprise</h3>
+            <div class="card-price">
+              <span class="amount">$99</span><span class="period">/ month</span>
+            </div>
+            <ul class="card-features">
+              <li>Мережа клубів</li>
+              <li>Власний брендинг</li>
+              <li>Підтримка 24/7</li>
+            </ul>
+            <a href="/contact/sales" class="btn">Зв'язатися з нами</a>
+          </article>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Семантичний підвал -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 GymPlanner SaaS. Всі права захищено.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
